@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2691d9, #e9f4fb);
+  min-height: 100vh;
+  overflow: hidden; }
+
+header {
+  position: relative;
+  background: #2691d9;
+  padding: 20px;
+  text-align: center;
+  color: #e9f4fb; }
+  header .top-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5px; }
+  header .search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-left: 75px; }
+  header .search-bar button[type="submit"] {
+    background-color: transparent;
+    border: none;
+    cursor: pointer; }
+  header .search-bar .fa-search {
+    color: #ffffff;
+    font-size: 16px; }
+  header .user-info,
+  header .about,
+  header .logout {
+    position: absolute;
+    top: 20px;
+    right: 205px; }
+  header .about {
+    right: 110px; }
+  header .logout {
+    right: 10px; }
+  header .user-info .btn,
+  header .about .btn,
+  header .logout .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #2691d9;
+    color: #e9f4fb;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px; }
+    header .user-info .btn:hover,
+    header .about .btn:hover,
+    header .logout .btn:hover {
+      color: #1a6aa1; }
+  header .user-info .btn,
+  header .about .btn,
+  header .logout .btn {
+    background: #e9f4fb;
+    color: #2691d9; }
+  header .title {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%); }
+  header .logo {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden; }
+    header .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+  header nav ul.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    header nav ul.navbar li {
+      display: inline-block; }
+      header nav ul.navbar li a {
+        display: block;
+        padding: 10px 20px;
+        color: #e9f4fb;
+        text-decoration: none;
+        font-weight: bold; }
+        header nav ul.navbar li a:hover {
+          background: #1976bb; }
+
+main {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2691d9, #e9f4fb);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 400px; }
+  main .banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #e9f4fb; }
+  main .car-list {
+    height: 400px;
+    scrollbar-width: thin;
+    scrollbar-color: #2691d9 #e9f4fb; }
+    main .car-list h2 {
+      font-size: 24px;
+      color: #2691d9;
+      margin-bottom: 20px; }
+    main .car-list .car-item {
+      display: inline-block;
+      width: 300px;
+      background: #e9f4fb;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px; }
+      main .car-list .car-item img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px; }
+      main .car-list .car-item h3 {
+        font-size: 20px;
+        color: #2691d9;
+        margin-bottom: 10px; }
+      main .car-list .car-item p {
+        color: #666;
+        margin-bottom: 10px; }
+      main .car-list .car-item .car-buttons {
+        margin-top: 10px; }
+        main .car-list .car-item .car-buttons .btn-rent {
+          display: inline-block;
+          padding: 8px 16px;
+          background: #2691d9;
+          color: #e9f4fb;
+          text-decoration: none;
+          border-radius: 25px;
+          font-weight: bold;
+          margin-right: 10px;
+          border: none; }
+          main .car-list .car-item .car-buttons .btn-rent:hover {
+            background: #1976bb; }
+        main .car-list .car-item .car-buttons .btn-info {
+          display: inline-block;
+          padding: 8px 16px;
+          background: none;
+          color: #2691d9;
+          text-decoration: none;
+          border-radius: 25px;
+          font-weight: bold;
+          margin-right: 10px;
+          border: none; }
+          main .car-list .car-item .car-buttons .btn-info:hover {
+            color: #1a6aa1; }
+
+footer {
+  background: #2691d9;
+  padding: 20px;
+  text-align: center;
+  color: #e9f4fb;
+  margin-top: auto; }

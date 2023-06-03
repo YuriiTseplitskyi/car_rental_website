@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dialog</title>
+    <link rel="stylesheet" href="styles/user-dialog.css">
+</head>
+<body>
+    <nav>
+        <div class="center">
+            <h1>User Dialog</h1>
+            <form method="post">
+                <section class="txt_field">
+                    <input type="text" id="username" required>
+                    <span></span>
+                    <label>Username</label>
+                </section>
+                <section class="txt_field">
+                    <input type="text" id="surname" required>
+                    <span></span>
+                    <label>Surname</label>
+                </section>
+                <section class="txt_field">
+                    <input type="email" id="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </section>
+                <section class="txt_field">
+                    <input type="password" id="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </section>
+                <section class="txt_field">
+                    <input type="password" id="confirm-password" required>
+                    <span></span>
+                    <label>Repeat Password</label>
+                </section>
+                <div class="button-group">
+                    <input type="submit" value="OK">
+                    <button type="button" class ="cancel-btn" onclick="window.location.href='login.html'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- <footer>
+        <script src="script.js"></script>
+        <p>&copy; 2023 Car Rental Service. All rights reserved.</p>
+    </footer> -->
+</body>
+</html>

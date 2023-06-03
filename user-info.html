@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info Page</title>
+    <link rel="stylesheet" href="styles/user-info.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="left-box">
+                <img src="images/logo2.png" alt="Logo Photo">
+                <div class="email">
+                    <label for="email"></label>
+                    <span id="email">johndoe@example.com</span>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="info-section">
+                    <h2>Info</h2>
+                    <form id="info-form">
+                        <div class="info-left">
+                            <label for="username">Username:</label>
+                            <p4>John</p4>
+                            <input type="text" id="username" readonly>
+                        </div>
+                        <div class="info-left">
+                            <label for="surname">Surname:</label> 
+                            <p4>Doe</p4>
+                            <input type="text" id="surname" readonly>
+                        </div>
+                        <div class="info-right">
+                            <label for="email">Email:</label>
+                            <p4>john@example.com</p4>
+                            <input type="email" id="email" readonly>
+                        </div>
+                        <div class="info-right">
+                            <label for="password">Password:</label>
+                            <p4>*****</p4>
+                            <input type="password" id="password" readonly>
+                        </div>
+                        <button id="edit-info-btn" onclick="enableInfoEdit()">Edit Info</button>
+                        <button id="save-info-btn" onclick="saveInfoEdit()" style="display: none;">Save Info</button>
+                    </form>
+                </div>
+                <div class="order-section">
+                    <h2>Order</h2>
+                    <div>
+                        <label for="car">Car:</label>
+                        <span id="car">Car Name</span>
+                    </div>
+                    <div>
+                        <label for="price">Price:</label>
+                        <span id="price">$100</span>
+                    </div>
+                    <div>
+                        <label for="start-date">Start Date:</label>
+                        <span id="start-date">2023-01-01</span>
+                    </div>
+                    <div>
+                        <label for="end-date">End Date:</label>
+                        <span id="end-date">2023-01-02</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <script src="script.js"></script>
+            <p>&copy; 2023 Car Rental Service. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

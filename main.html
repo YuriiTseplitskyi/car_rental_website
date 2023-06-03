@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="top-section">
+            <div class="logo">
+                <img src="images/logo2.png" alt="Logo" />
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search" />
+            </div>
+            <div class="user-info">
+                <button class="btn" onclick="window.location.href='user-info.html'">User Info</button>
+            </div>
+            <div class="about">
+                <button class="btn" onclick="window.location.href='about.html'">About</button>
+            </div>
+            <div class="logout">
+                <button class="btn">Logout</button>
+            </div>
+            <div class="title">
+                <h2>CAR GO</h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="carList" class="car-list">
+        </div>
+
+    </main>
+
+    <footer>
+        <script src="script.js"></script>
+        <p>&copy; 2023 Car Rental Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Define an array of car objects
+        const cars = [
+            {
+                name: "Car 1",
+                description: "This is the description of car 1.",
+                price: 100,
+                availableDate: "2023/1/1",
+                photo: "images/car1.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },{
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },{
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },{
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },{
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },{
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            },
+            {
+                name: "Car 2",
+                description: "This is the description of car 2.",
+                price: 150,
+                availableDate: "2023/1/5",
+                photo: "images/car2.png" // Path to the car photo
+            }
+        ];
+
+        // Get the car list container element
+        const carListContainer = document.getElementById("carList");
+        
+        const carBox = document.createElement("div");
+        carBox.classList.add("car-list");
+        
+        // Iterate over the cars array and generate HTML for each car
+        cars.forEach((car) => {
+            // Create a new car box element
+            
+
+            // Create a wrapper element for the car information
+            const carInfoWrapper = document.createElement("div");
+            carInfoWrapper.classList.add("car-item");
+
+            // Create a white box element
+            const whiteBox = document.createElement("div");
+            whiteBox.classList.add("white-box");
+            carInfoWrapper.appendChild(whiteBox);
+
+            // Create an image element for the car photo
+            const carPhoto = document.createElement("img");
+            carPhoto.src = car.photo;
+            carPhoto.alt = "Car Photo";
+            carInfoWrapper.appendChild(carPhoto);
+
+            // Set the car name
+            const carName = document.createElement("h2");
+            carName.textContent = car.name;
+            carInfoWrapper.appendChild(carName);
+
+            // Set the car description
+            const carDescription = document.createElement("p");
+            carDescription.innerHTML = "<strong>Description:</strong> " + car.description;
+            carInfoWrapper.appendChild(carDescription);
+
+            // Set the car price
+            const carPrice = document.createElement("p");
+            carPrice.innerHTML = "<strong>Price:</strong> <span>" + car.price + "</span> USD";
+            carInfoWrapper.appendChild(carPrice);
+
+            // Set the car available dates
+            const carAvailableDate = document.createElement("p");
+            carAvailableDate.innerHTML = "<strong>Available Dates:</strong> " + car.availableDate;
+            carInfoWrapper.appendChild(carAvailableDate);
+
+            // Create a button container
+            const buttonContainer = document.createElement("div");
+            buttonContainer.classList.add("car-buttons");
+
+            // Create a "Make Order" button
+            const makeOrderButton = document.createElement("button");
+            makeOrderButton.classList.add("btn-rent");
+            makeOrderButton.textContent = "Make Order";
+            buttonContainer.appendChild(makeOrderButton);
+
+            // Create a "More Info" button
+            const moreInfoButton = document.createElement("button");
+            moreInfoButton.classList.add("btn");
+            moreInfoButton.classList.add("btn-info");
+            moreInfoButton.textContent = "More Info";
+            buttonContainer.appendChild(moreInfoButton);
+
+            // Append the button container to the car info wrapper
+            carInfoWrapper.appendChild(buttonContainer);
+
+            // Append the car info wrapper to the car box
+            carBox.appendChild(carInfoWrapper);
+
+            // Append the car box to the car list container
+            carListContainer.appendChild(carBox);
+        });
+    </script>
+</body>
+</html>

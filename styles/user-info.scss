@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2691d9, #e9f4fb);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.left-box {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        height: 250px;
+        margin-top: -110px;
+        border-radius: 60%;
+    }
+
+    .email {
+        text-align: center;
+        color: #2d2d2daf;
+        margin-bottom: 20px;
+
+        label {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        span {
+            display: block;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.right-box {
+    padding: 30px;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -15px;
+        height: calc(100%);
+        width: 1px;
+        background-color: #ccc;
+    }
+
+    .info-section {
+        margin-bottom: 20px;
+
+        h2 {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid silver;
+        }
+
+        form {
+            .info-left,
+            .info-right {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                label {
+                    font-size: 16px;
+                    font-weight: bold;
+                    width: 100px;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                input[type="password"] {
+                    flex: 1;
+                    padding: 5px;
+                    font-size: 16px;
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+            }
+
+            .info-left {
+                margin-right: 20px;
+            }
+        }
+
+        #edit-info-btn,
+        #save-info-btn {
+            width: 35%;
+            height: 40px;
+            background-color: #2691d9;
+            color: #e9f4fb;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin-bottom: 20px;
+            margin-left: 32.5%;
+
+            &:hover {
+                background-color: #1a6aa1;
+            }
+        }
+
+        #save-info-btn {
+            display: none;
+        }
+    }
+
+    .order-section {
+        h2 {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid silver;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            label {
+                font-size: 16px;
+                font-weight: bold;
+                width: 100px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+footer {
+    background: #2691d9;
+    padding: 10px; /* Decreased padding to reduce the height */
+    text-align: center;
+    color: #e9f4fb;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+
+// Media Queries
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .left-box,
+    .right-box {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .left-box {
+        margin-bottom: 20px;
+    }
+
+    .email {
+        margin-top: 10px;
+    }
+}
