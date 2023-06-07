@@ -1,3 +1,21 @@
+
+@mixin button-styles {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@mixin background-styles {
+    background: linear-gradient(to right, #2691d9, #e9f4fb);
+    height: 100vh;
+    overflow: hidden;
+}
+
+@mixin form-styles {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
 
 * {
@@ -8,11 +26,7 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #2691d9, #e9f4fb);
-    height: 100vh;
-    overflow: hidden;
+    @include background-styles;
 }
 
 .center {
@@ -32,8 +46,7 @@ body {
     }
 
     form {
-        padding: 0 40px;
-        box-sizing: border-box;
+        @include form-styles;
 
         .txt_field {
             position: relative;
@@ -136,7 +149,7 @@ body {
 
 footer {
     background: #2691d9;
-    padding: 10px; /* Decreased padding to reduce the height */
+    padding: 10px;
     text-align: center;
     color: #e9f4fb;
     margin-top: auto;
